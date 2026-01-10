@@ -1,8 +1,8 @@
-# Uygalanin calismasi için JRE lazim
+# Uygalamanin calismasi için JRE lazim
 FROM eclipse-temurin:21-jre-alpine
 
 # projenin jar dosyasi burada
-ARG JAR_FILE=target/*.jar
+ARG JAR_FILE=build/libs/*.jar
 
 # projenin jar halini docker icine kopyala
 COPY ${JAR_FILE} my_app.jar

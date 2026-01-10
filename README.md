@@ -166,6 +166,10 @@ docker push mimaraslan/devops_002_hello:v002
 docker push mimaraslan/devops_002_hello:v003
 ```
 
+```
+docker push mimaraslan/devops_002_hello:latest
+```
+
 ---
 
 ### ============= Docker Hub'dan image çekmek =============
@@ -180,6 +184,169 @@ docker pull mimaraslan/devops_002_hello:v002
 
 ```
 docker pull mimaraslan/devops_002_hello:v003
+```
+
+```
+docker pull mimaraslan/devops_002_hello
+```
+
+
+---
+
+### Network
+Sistemler uygulamalardan meydana gelir. 
+Apps (uygulamalar) aralarında da bağ vardır.
+
+---
+
+```
+docker network ls
+```
+
+```
+docker network create --help
+```
+
+```
+docker network create -d bridge    my-network
+```
+
+```
+docker network create --driver  bridge   my-network
+```
+
+Network bilgisi
+
+```
+docker network inspect  my-network
+```
+
+
+---
+
+Bu networkü kim kullanacak?
+
+---
+
+Çalışan bir container'ın network'e bağlanması kullanması lazım.
+
+Image1 ---> run ---> Container1   (Kalp)
+Image2 ---> run ---> Container2   (Beyin)
+Image3 ---> run ---> Container3   (Akciğer)
+
+
+Bunların bir arada çalışmasını
+Container1   +  Container2  +  Container3
+
+
+```
+docker network --help
+```
+
+
+### Network'e eklediğim uygulamalar
+
+```
+docker network connect  my-network    my-app-1
+```
+
+```
+docker network connect  my-network    my-app-2
+```
+
+```
+docker network connect  my-network    my-app-3
+```
+
+
+### Network'ten bir uygulamayı çıkarma
+
+```
+docker network  disconnect  my-network    my-app-1
+```
+
+### Network silme komutu
+```
+docker network  rm    my-network
+```
+---
+
+
+### Volume  (kayıt alanı, ayar dosyaları)
+
+Volumleri listele
+```
+docker volume ls
+```
+
+Volume oluştur
+```
+docker  volume  create   my-volume
+```
+
+Volume bilgisini almak
+```
+docker volume inspect  my-volume
+```
+
+```
+docker volume rm
+```
+
+ÖDEV: my-volume ile my-app1'i bağlayın.
+Gordon Ai o kısımdan öğrenebilirsiniz.
+
+
+
+Bu kullanılmayınları
+```
+docker volume prune
+```
+
+
+Zorla silmek istiyorsak
+
+```
+docker volume prune  --all  
+```
+
+
+
+
+Sadece istediğim bir volume silmek
+```
+docker volume rm  my-volume2
+```
+
+Sadece istediğim birden fazla volume silmek
+```
+docker  volume  rm   my-volume1 my-volume2 my-volume3
+```
+
+
+---
+
+### docker compose
+
+```
+docker compose version
+```
+
+### Seçilen Docker File dosyasını çalıştır.
+```
+docker compose  -f  compose.yaml  up
+```
+```
+docker compose  --file  compose.yaml  up
+```
+
+###  Seçilen Docker File dosyasını durdur.
+```
+docker compose  -f  compose.yaml  down
+```
+
+```
+docker compose  --file  compose.yaml  down
 ```
 
 
