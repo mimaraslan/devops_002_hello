@@ -21,7 +21,7 @@ services:
       ME_CONFIG_BASICAUTH_PASSWORD: 123456789
 
   postgresql:
-    image: postgres:latest
+    image: postgres:15
     restart: always
     environment:
       POSTGRES_USER: devops
