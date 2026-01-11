@@ -350,3 +350,66 @@ docker compose  --file  compose.yaml  down
 ```
 
 
+
+
+### ======= KUBERNETES (K8s) =========
+
+#### Kurulum
+https://minikube.sigs.k8s.io/
+
+
+Windows
+```
+winget install Kubernetes.minikube
+```
+
+
+MacOS
+```
+brew install minikube
+```
+
+---
+
+Bir terminal aç. 
+Minikube çalıştır ve bu terminali çalışman bitinceye kapatma!
+
+```
+minikube start
+```
+
+İşin bitince minikube aracını durudur.
+
+```
+minikube stop
+```
+
+---
+
+yeni bir terminal aç
+#### dashboard ile arayüz üzerinden Kubernets'in içini yönetebilirim.
+
+
+
+
+---
+
+Kubernetes ile iletişim kuracağım aracın adı
+```
+kubectl version
+```
+
+
+
+```
+kubectl run nginx --image=nginx
+```
+
+
+```
+kubectl run my-pod1 --image=mimaraslan/devops_002_hello:v002
+```
+
+
+
+

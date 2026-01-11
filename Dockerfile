@@ -1,5 +1,5 @@
 # Uygalamanin calismasi için JRE lazim
-FROM eclipse-temurin:21-jre-alpine
+FROM eclipse-temurin:
 
 # projenin jar dosyasi burada
 ARG JAR_FILE=build/libs/*.jar
