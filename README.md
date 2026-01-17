@@ -433,6 +433,10 @@ kubectl api-resources
 Pod oluşturması için
 ```
 kubectl  run  my-pod1  --image=mimaraslan/devops_002_hello:v002
+
+kubectl  run  my-pod2  --image=mimaraslan/devops_002_hello:v002
+
+kubectl  run  my-pod3  --image=mimaraslan/devops_002_hello:v002
 ```
 
 Image'den pod yapmak
@@ -469,6 +473,10 @@ kubectl get nodes  -o wide
 
 ---
 ### Yaml ile Pod oluşturmak
+#### Dosyanın bulunduğunu konuma gideceğiz.
+
+D:\workspace\devops_002_hello\K8s\_01_pod
+
 ```
 kubectl  apply  -f   _01_my_pod_create.yaml
 ```
