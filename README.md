@@ -394,22 +394,69 @@ yeni bir terminal aç
 
 ---
 
+
+
+### ==== K8s ====
+
+
 Kubernetes ile iletişim kuracağım aracın adı
 ```
 kubectl version
 ```
 
+Yardım komutu
+```
+kubectl   get    --help
+```
 
 
+Sistemdeki kaynakların isimlerindeki kısatlmalar
+```
+kubectl api-resources
+```
+
+
+### ==== Pod ====
+
+
+Pod oluşturması için
+```
+kubectl  run  my-pod1  --image=mimaraslan/devops_002_hello:v002
+```
+
+Image'den pod yapmak
 ```
 kubectl run nginx --image=nginx
 ```
 
 
+Podların listesini bize verir.
 ```
-kubectl run my-pod1 --image=mimaraslan/devops_002_hello:v002
+kubectl get pods
+kubectl get pod
+kubectl get po
 ```
 
 
+Podların bize detayını verir.
+```
+kubectl get pods  -o wide
+```
 
+Nodeları listeler
+```
+kubectl get nodes
+kubectl get node
+kubectl get no
+```
+
+Nodeların detayını verir.
+```
+kubectl get nodes  -o wide
+```
+
+
+---
+
+### ==== Deployment ====
 
