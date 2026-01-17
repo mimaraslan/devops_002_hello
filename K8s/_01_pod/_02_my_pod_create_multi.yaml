@@ -30,7 +30,7 @@ metadata:
 spec:
   containers:
     - name: devops-002-hello2
-      image: mimaraslan/devops_002_hello:v002
+      image: mysql:latest
       resources:
         limits:
           memory: "300Mi"
