@@ -74,6 +74,11 @@ docker   build     --build-arg   JAR_FILE=target/devops_001_hello-1.0.2.jar     
 docker buildx  build     --build-arg   JAR_FILE=target/devops_001_hello-1.0.3.jar       --tag  mimaraslan/devops_001_hello:v003     .
 ```
 
+#### Eğer en son version her ne ise onun için mutlaka latest sürümü de çıkartılmalı.
+```
+docker buildx  build     --build-arg   JAR_FILE=target/devops_001_hello-1.0.3.jar       --tag  mimaraslan/devops_001_hello:latest     .
+```
+
 ---
 
 ### ============= kendi projemizi Docker image'den container haline çevimek =============
@@ -148,6 +153,12 @@ docker build     --build-arg   JAR_FILE=build/libs/devops_002_hello-1.0.2.jar   
 ### Build v3
 ```
 docker build     --build-arg   JAR_FILE=build/libs/devops_002_hello-1.0.3.jar       --tag  mimaraslan/devops_002_hello:v003     .
+```
+
+
+#### Eğer en son version her ne ise onun için mutlaka latest sürümü de çıkartılmalı.
+```
+docker build     --build-arg   JAR_FILE=build/libs/devops_002_hello-1.0.2.jar       --tag  mimaraslan/devops_002_hello:latest     .
 ```
 
 ---
@@ -457,6 +468,23 @@ kubectl get nodes  -o wide
 
 
 ---
+### Yaml ile Pod oluşturmak
+```
+kubectl  apply  -f   _01_my_pod_create.yaml
+```
+
+```
+kubectl  delete  -f   _01_my_pod_create.yaml
+```
+
+
+
+
+
+---
+
+
+
 
 ### ==== Deployment ====
 
