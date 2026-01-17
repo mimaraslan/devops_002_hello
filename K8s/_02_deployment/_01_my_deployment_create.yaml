@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: devops-002-hello
 spec:
-  replicas: 4
+  replicas: 1
   selector:
     matchLabels:
       app: devops-002-hello

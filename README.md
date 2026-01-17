@@ -487,12 +487,40 @@ kubectl  delete  -f   _01_my_pod_create.yaml
 
 
 
+---
 
+### ==== Deployment ====
+```
+kubectl  apply  -f   _01_my_deployment_create.yaml
+```
+
+```
+kubectl  delete  -f   _01_my_deployment_create.yaml
+```
 
 ---
 
+### ==== Service ====
+```
+kubectl  apply  -f   _01_my_service_create.yaml
+```
+
+```
+kubectl  delete  -f   _01_my_service_create.yaml
+```
 
 
 
-### ==== Deployment ====
+### Servis ile podlara erişim sağlıyoruz. Burada port random geliyor.
+```
+minikube  service   devops-002-hello
+```
+
+
+### web tarayıcısından portu sabitliyoruz. Pod'un içindeki uygulamaya erişiyoruz.
+```
+kubectl port-forward service/devops-002-hello 9090:9090
+```
+
+
 
