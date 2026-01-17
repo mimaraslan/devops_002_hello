@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: devops-002-hello
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: devops-002-hello
@@ -17,7 +17,7 @@ spec:
         image: mimaraslan/devops_002_hello:v002
         resources:
           limits:
-            memory: "400Mi"
+            memory: "300Mi"
             cpu: "500m"
         ports:
         - containerPort: 8080   # Pod içindeki .jar uygulamanın portu
