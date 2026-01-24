@@ -1,5 +1,5 @@
 # Uygalamanin calismasi için JRE lazim
-FROM eclipse-temurin:
+FROM eclipse-temurin:17
 
 # projenin jar dosyasi burada
 ARG JAR_FILE=build/libs/*.jar
